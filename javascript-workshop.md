@@ -250,10 +250,47 @@ number /= 2;          // เท่ากับ number = number / 2
 
 ### บันทึกผลการทดลอง 2.2
 ```html
-[บันทึกโค้ด ที่นี่]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบทดสอบที่ 2.2: การคำนวณพื้นฐาน</title>
+</head>
+<body>
+    <script>
+        //1. เขียนโปรแกรม กำหนดคะแนน  3 วิชา แล้วหาค่าคะแนนเฉลี่ย แล้วแสดงผลการคำนวณ
+        let thaiScore = 50
+        let sciScore = 35
+        let mathScore = 45
+
+        let averageScore = (thaiScore + sciScore + mathScore) / 3
+        
+        console.log(`Score:\n
+        Thai score: ${thaiScore}/100\n
+        Sci score: ${sciScore}/100\n
+        Math score: ${mathScore}/100`)
+
+        console.log(`Avarage score is: ${averageScore.toFixed(2)}/100`)
+
+        //2. เขียนโปรแกรม กำหนดชื่อสินค้า ราคาสินค้า คำนวณราคาสินค้าที่รวม VAT 7% แล้วแสดงผลการคำนวณ
+        const productName = "Bomb"
+        let productPrice = 550
+        const VAT_RATE = 0.07
+
+        let totalPrice = productPrice + (productPrice * VAT_RATE)
+
+        console.log("--- ใบเสร็จสินค้า ---")
+
+        console.log(`สินค้า: ${productName}\n
+ราคาเดิม: ${productPrice} บาท"\n`)
+        console.log(`ราคาสุทธิ (รวม VAT 7%): ${totalPrice} บาท`)
+    </script>
+</body>
+</html>
 ```
 **รูปผลการทดลอง**
-![รูปผลการทดลองที่ 2.2](images/image.png)
+<br>![รูปผลการทดลองที่ 2.2](images/แบบทดสอบที่%202.2.png)
 
 ### 2.3 การควบคุมการทำงาน
 

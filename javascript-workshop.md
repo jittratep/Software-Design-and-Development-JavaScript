@@ -683,10 +683,42 @@ console.log("เลขคู่:", evenNumbers); // [2, 4]
 
 ### บันทึกผลการทดลอง 2.4.2
 ```html
-[บันทึกโค้ด ที่นี่]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบทดสอบ 2.4.2 เขียนฟังก์ชันต่อไปนี้ในรูปแบบ Arrow function</title>
+</head>
+<body>
+    <script>
+        //1. สร้าง function คำนวณค่า BMI (ดัชนีมวลกาย) จากน้ำหนักและส่วนสูง
+        const calculateBMI = (weight, height) => (weight / ((height / 100) ** 2)).toFixed(2);
+
+        console.log(`BMI ของคุณคือ: ${calculateBMI(70, 175)}`);
+
+        //2. สร้าง function ที่รับชื่อและอายุ แล้วแสดงข้อความทักทายที่เหมาะสมกับอายุ
+        const personalGreet = (name, age) => {
+            if (age < 20) {
+                return `Hello! ${name} `;
+            } else {
+                return `Hello! sir! ${name}`;
+            }
+        };
+
+        console.log(personalGreet("Jittratep", 20));
+
+        //3. เขียน function ตรวจสอบรหัสผ่านว่ามีความยาวมากกว่า 8 ตัวอักษรหรือไม่
+        const isPasswordValid = password => password.length > 8;
+
+        console.log(isPasswordValid("1234") ? "Safe password!!!" : "Please try again...");
+
+    </script>
+</body>
+</html>
 ```
 **รูปผลการทดลอง**
-![รูปผลการทดลองที่ 2.4.2](images/image.png)
+<br>![รูปผลการทดลองที่ 2.4.2](images/แบบทดสอบที่%202.4.2.png)
 
 
 ## การทดลองที่ 3 : การใช้ JavaScript กับ HTML และ CSS
